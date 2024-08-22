@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #fffff;
+}
+
+.signup-container{
+    width: 70%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 50%;
+    color: #c3c3c3bb;
+    margin: auto;
+    margin-top: 15%;
+    padding: 0 4em;
+}
+
+form:first-of-type{
+    color: #555555;
+}
+
+form p{
+    margin: 0.5em 0 1em 0;   
+}
+
+label{
+    margin: 1em 0 0 0;
+    color: #555555;
+    font-size: 0.8em;
+}
+
+input[type=text], input[type=email], input[type=password]{
+    margin: 8px 0;
+    padding: 0.8em 1em;
+    border: none;
+    background-color: #f2f2f2;
+}
+input:focus{
+    border:1px solid #1d9bf0;
+    outline:none; 
+}
+
+input[type=password]{
+    padding: 0.8em 17em 0.8em 1em;
+
+}
+
+.password-container {
+    position: relative;
+}
+  
+.password-input {
+    padding: 0 2em 0 2em; /* add space for icon */
+}
+  
+.fa-eye {
+    position: absolute;
+    right: 5%; /* move icon inside input field */
+    top: 50%;
+    color: #6666667a;
+    font-size: 0.8em;
+}
+
+form p, .checkbox-container small, a{
+    color: #a19f9f;
+}
+
+input[type=checkbox]{
+    /* color: #c3c3c3; */
+    border-color: none;
+}
+
+
+.checkbox-container p{
+    width: 90%;
+    padding-left: 0.8em;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.8em;
+}
+
+button.signup{
+    background-color: #96bffc;
+    color: #fff;
+    padding: 12px 20px;
+    margin: 2em 0;
+    border: none;
+}
+
+button.signup:hover{
+    background-color: #96bffca1;
+}
+
+span{
+    color: red;
+}
+
+a{
+    text-align: center;
+    font-size: 0.8em;
+}
+
+
+img{
+    width:100%;
+    height: 100%;
+}
+
+@media (max-width: 600px){
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
