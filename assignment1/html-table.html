@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html table</title>
+    <style>
+        body{
+            background-color: whitesmoke
+        }
+        table, th,td {
+            padding: 10px;
+            border: 2px solid black;
+            border-collapse:collapse;
+        }
+        .container{
+          background-color: rgb(228, 227, 227); 
+          margin: auto ;
+          margin-top: 10%;
+          width: 50%;
+        }
+        table {
+            width: 100%;
+        }
+        th{
+            text-align: center;
+        }
+        tr:nth-child(odd){
+            background-color: dimgray;
+        }
+        tr:hover{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+   <Table>
+    <caption><b>Music Artists of the Year</b></caption>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>Year</th>
+    </tr>
+    <tr>
+        <td>To Kill a Mockingbird</td>
+        <td>Harper Lee</td>
+        <td>Fiction</td>
+        <td>1960</td>
+    </tr>
+    <tr>
+        <td>1984</td>
+        <td>George Orwell</td>
+        <td>Dystopian</td>
+        <td>1949</td>
+    </tr>
+    <tr>
+        <td>Pride and Prejudice</td>
+        <td rowspan="2">Jane Austen</td>
+        <td rowspan="2">Romance</td>
+        <td>1813</td>
+    </tr>
+    <tr>
+        <td>Sense and Sensibility</td>
+        <!-- <td>Jane Austen</td> -->
+        <!-- <td>Romance</td> -->
+        <td>1811</td>
+    </tr>
+    <tr>
+        <td>The Great Gatsby</td>
+        <td>F. Scott Fitzgerald</td>
+        <td>Fiction</td>
+        <td>1925</td>
+    </tr>
+    <tr>
+        <td>Moby-Dick</td>
+        <td>Herman Melville</td>
+        <td>Adventure</td>
+        <td>1851</td>
+    </tr>
+
+   </Table>
+</div>
+</body>
+</html>
