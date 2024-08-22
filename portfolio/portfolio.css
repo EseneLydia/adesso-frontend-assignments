@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgb(228, 248, 247);
+    color: #1bbcc7;
+    text-align:center;
+    font-size: 2em;
+    padding-bottom: 0.5em;
+}
+
+#name{
+    padding: 2em 0 1em 0;
+    font-family: 'Tangerine', cursive;
+    color:rgb(26, 165, 175);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4em 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*section one*/
+.avatar{
+    background-image: url(./images/avatar.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 200px;
+    height:200px;
+    border-radius: 100px;
+}
+
+.profile h2 {
+    padding: 1em 0 0.2em 0;
+    font-size: 1.5em;
+
+}
+
+.profile p {
+    width: 15em;
+    text-align: center;
+    padding-bottom:2em;
+}
+
+/*section two*/
+.skills-container{
+    width: 30%;
+    display: flex;
+    margin-bottom: 1.5em;
+}
+
+.picture img{ /* For all image container*/
+    width: 200px;
+    height: 200px;
+}
+
+.text{
+    padding: 0 1.2em;
+}
+
+/*section three*/
+.contact p{
+    width: 22em;
+    padding: 2em 0;
+    text-align: center;
+}
+
+button{
+    padding: 0.5em 1em;
+    background-color:rgb(26, 165, 175);
+    color:#fff;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+
+}
+button:hover{
+    background-color: rgba(27, 188, 199, 0.596);
+}
+
+button:active{
+    background-color: rgba(27, 188, 199, 0.596);
+    box-shadow: 0 5px #999;
+}
+
+footer{
+    background-color:#65bfbf;
+    text-align: center;
+    color: white;
+}
+
+/*heading with similar colors*/
+h2 {
+    color: rgb(27, 188, 199);
+    margin-bottom: 1.5em;
+    font-size: 2em;
+}
+
+h3{
+    color: rgb(15, 115, 122);
+    margin-bottom: 0.5em;
+}
+
+footer a{
+    display: inline-block;
+    padding: 2em 0 1em 0;
+    margin-right: 2em;
+    text-decoration:none;
+    color: rgb(15, 115, 122);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+footer p{
+    padding-bottom: 1em;
+}
+
