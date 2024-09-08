@@ -7,8 +7,11 @@
 
 main{
     background-color:#000;
+}
+
+section, header{
     color: #fff;
-    padding: 0 18%;
+    padding: 0 10%;
 }
 
 .icon{
@@ -39,7 +42,7 @@ header nav a:last-child{
 }
 
 .hero {
-    background:  transparent url("./images/memecoin.png") no-repeat center;
+    background:  transparent url("./images/memecoin.png") no-repeat left top;
 }
 
 .welcome h2{
@@ -201,9 +204,9 @@ footer ul a{
     .column {
         flex: 50%;
         max-width: 50%;}
-        .hero, .contact-container, .about{
-        flex:100%
-} 
+        /* .hero, .contact-container, .about{
+        flex:50%
+}  */
 }
   /*Mobile styles*/
 @media(max-width: 600px) {
