@@ -2,11 +2,215 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+main{
+    background-color:#000;
+    color: #fff;
+    padding: 0 18%;
+}
 
+.icon{
+    max-width: 80px;
+    max-height: auto;
+}
 
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom: 20px;
+}
+header nav a{
+  text-decoration: none;
+  color: #fff;
+  padding: 1em 1em;
+}
 
+header nav a:last-child{
+    background-color: #d09801;
+    border-radius: 2em;
+}
 
+.hero, .contact-container, .about{
+    display: flex;
+    flex: 50%
+}
 
-#990011, #FCF6F5
+.hero {
+    background:  transparent url("./images/memecoin.png") no-repeat center;
+}
+
+.welcome h2{
+    width: 8em;
+    margin: 1em 0;
+}
+
+.colour{
+    color:#dfa404;
+    padding: 1em 0;
+}
+
+.welcome p{
+    width: 22em ;
+    padding: 2em 0;
+}
+
+.hero button{
+    background-color: #d09801;
+    background-image: linear-gradient(to right, #d09801 , #f9a334);
+    border-radius: 10px;
+    padding: 0.5em 1.5em;
+    border: none;
+    margin: 2em 0;
+}
+
+.kitten{
+    background: url("./images/kitten-1.png") no-repeat center;
+    width: 300px;
+    height: 300px; 
+    margin: auto;
+}
+
+.text{
+    text-align: center;
+    padding: 4em 0;
+}
+
+.gallery-container, .about,.contact-container, footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4em 0;
+}
+
+  .column {
+    flex: 33.3%;
+    max-width: 33.3%;
+    padding: 0 0.5em;
+}
+
+.column img{
+    max-width: 100%; height: auto; /* so it wont stretch more than it max.width */
+    vertical-align: bottom; /*To align image to text*/
+}
+
+.moneybag figure{
+    background-color: #d09801;
+    background-image: linear-gradient(to right, #d09801 , #f9a334);
+    color: #fff;
+}
+  
+.tokenomics .column figure{
+    margin-top: 1em;
+    color:#000;
+    background-color: #f2f2f2;
+    text-align: center;
+    border-radius: 5px;
+    height: 450px;
+}
+
+figure img{
+    width: 100%;
+}
+
+.about-text{
+    flex: 50%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.about .kitten{
+    width: 50%;
+}
+
+.about-text h2{
+    color:#d09801;
+}
+.about-text p{
+    color: #fff;
+    font-size: 0.9em;
+    padding: 1em 0;
+    width: 31em;
+}
+
+.roadmap figure{
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.roadmap figure img{
+    max-width: 100px;
+    max-height: auto;
+    vertical-align: middle;
+    margin: 0 1em;
+}
+
+.number{
+    border: 1px solid #fff;
+    border-radius: 1em;
+    padding:0.4em 0.5em;
+}
+
+.contact-text p{
+    width: 42em;
+}
+
+.contact-text button{
+    background-color: #eb6f53;
+    padding: 0.5em;
+    border-radius: 5px;
+    margin: 2em 0;
+}
+
+.call-to-action{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 2em 0;
+   text-align: center;
+}
+
+.mini-kitten{
+    width: 200px;
+}
+
+i{
+    display: inline-block;
+    padding: 0.5em;
+    margin: 1em 0.5em;
+    border-radius:1em;
+    background-color: #d09801;
+}
+
+footer{
+    padding: 2em 2em;
+    color: #000;
+    background-color: #f3f7ff;
+    justify-content: space-between;
+}
+
+footer ul a{
+    text-decoration: none;
+    color: #000;
+    margin-left: 1em;
+}
+
+@media (max-width: 800px){
+    .column {
+        flex: 50%;
+        max-width: 50%;}
+        .hero, .contact-container, .about{
+        flex:100%
+} 
+}
+  /*Mobile styles*/
+@media(max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;}
+        .hero, .contact-container, .about{
+        flex:100%;
+}
+}
