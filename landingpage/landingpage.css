@@ -31,9 +31,13 @@ header nav a{
   padding: 1em 1em;
 }
 
-header nav a:last-child{
+header nav a:nth-child(7){
     background-color: #d09801;
     border-radius: 2em;
+}
+
+.humburger{
+    display: none;
 }
 
 .hero, .contact-container, .about{
@@ -179,7 +183,7 @@ figure img{
     width: 200px;
 }
 
-i{
+.fa-brands{
     display: inline-block;
     padding: 0.5em;
     margin: 1em 0.5em;
@@ -198,22 +202,22 @@ footer ul a{
     text-decoration: none;
     color: #000;
     margin-left: 1em;
-}
+} 
 
-@media (max-width: 800px){
-    .column {
-        flex: 50%;
-        max-width: 50%;}
-        /* .hero, .contact-container, .about{
-        flex:50%
-}  */
-}
   /*Mobile styles*/
 @media(max-width: 600px) {
     .column {
         flex: 100%;
         max-width: 100%;}
-        .hero, .contact-container, .about{
-        flex:100%;
-}
+    .hero, .contact-container, .about{
+        flex:100%;}
+        
+    .humburger{
+        display: block;
+        color: white;
+    }
+
+    .topnav{
+        display: none;
+    }
 }
