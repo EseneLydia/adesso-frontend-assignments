@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Meme Landing Page</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico.png">
     <link rel="stylesheet" href="landingpage.css">
     <script src="https://kit.fontawesome.com/ec43344725.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
+    <main id="main">
         <header id="home">
             <nav>
-                <img class= icon src="./images/kitten-1.png" alt="kitten">
-                <div class="topnav">
-                <div class="topnav">
+                <img class= logo src="./images/kitten-1.png" alt="kitten">
+                <div id="mytopnav" class="topnav">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="#tokenomics">Tokenomics</a>
@@ -22,65 +23,63 @@
                     <a href="#">Live chart</a>
                     <a href="#">Whitepaper</a>
                     <a href="#">Buy Now</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i></a>
                 </div>
-                <i class="fa fa-bars"></i>
-            </nav>
-                
+            </nav>       
         </header>
 
-        <section  id="hero" class="hero">
-            <div class="welcome">
-                <h2>WELCOME TO <span class="colour">Baby Kitten</span></h2>
-                <p>The era of dogs is over! The era of cats has arrived. With the cuttest Meme token,
-                    Baby Kitten will promote the revolution.</p>
-                <small>CA: 0xB441A16936c7FC3eA28F9E9BE8d4CE0270C9931a</small>
-                <div>
-                    <button>Telegram</button>
-                    <button>DEXTools</button>
-                    <button>Twitter</button>
+        <section  id="hero" class="hero-container">
+                <div class="welcome">
+                    <h1>WELCOME TO <span class="colour">Baby Kitten</h1>
+                    <p>The era of dogs is over! The era of cats has arrived. With the cuttest Meme Token,
+                        Baby Kitten will promote the revolution.</p>
+                    <p><small>CA: 0xB441A16936c7FC3eA28F9E9BE8d4CE0270C9931a</small></p>
+                    <div>
+                        <button>Telegram</button>
+                        <button>DEXTools</button>
+                        <button>Twitter</button>
+                    </div>
                 </div>
-            </div>
-            <div class="kitten" alt="kitten"><div>
-
-        
+                <div class="kitten"><img src="./images/kitten-1.png" alt="kitten"><div>
         </section>
 
         <section id="tokenomics" class="tokenomics">
             <div class="text"> 
-                <p class="colour">// BABYKITTEN ECOLOGY</p>
-                <h2>TOKENOMICS</h2>
+                <h4 class="colour">// BABYKITTEN ECOLOGY</h4>
+                <h1>TOKENOMICS</h1>
+                <input type="range" min="1" max="100" value="50" class="slider">
             </div>
             <div class="gallery-container">
                 <div class="column">
-                    <figure>
-                        <img src="./images/moneypc.png" alt="coinPC"> 
-                        <figcaption><Strong>6% Buy/Sell Tax</Strong>
-                            <p>A 6% fee will be allocated to marketing and development of the project to take the token to 1000x.</p>
-                        </figcaption>   
-                    </figure>
+                    <div class= 'figure'>
+                        <img src="./images/coinpc.png" alt="coinPC"></div>
+                    <div class='figcaption'>
+                        <h3>6% Buy/Sell Tax</h3>
+                        <p><b>A 6% fee will be allocated to marketing and development of the project to take the token to 1000x.</b></p>
+                    </div>
                 </div>
                 <div class="column moneybag">
-                    <figure>
-                        <img src="./images/moneybag.png" alt="moneybag">
-                        <figcaption><Strong>Buy Back</Strong>
-                            <p>We will maintain a buy back system to stabilize the $BabyKitten currency whenever necessary,
-                                it will be activated and all repurchased tokens will be burned.</p>
-                        </figcaption>   
-                    </figure>  
+                    <div class= 'figure'>
+                        <img src="./images/moneybag.png" alt="moneybag"></div>
+                    <div class='figcaption'>
+                        <h3>Buy Back</h3>
+                        <p><b>We will maintain a buy back system to stabilize the $BabyKitten currency whenever necessary,
+                        it will be activated and all repurchased tokens will be burned.</b></p>
+                    </div>
                 </div>
                 <div class="column">
-                    <figure>
-                        <img src="./images/moneytab.png" alt="coin tablet">
-                        <figcaption><Strong>Total Supply</Strong>
-                            <p>There is a total supply of 1,000,000,000 tokens.</p>
-                        </figcaption>   
-                    </figure>
+                    <div class= 'figure'>
+                        <img src="./images/moneytab.png" alt="coin tablet"></div>
+                    <div class='figcaption'>
+                        <h3>Total Supply</h3>
+                        <p><b>There is a total supply of 1,000,000,000 tokens.</b></p>
+                    </div>
                 </div>
-            </div>
         </section>
 
-        <section id="about" class="about">
-            <div class=kitten alt="kitten"></div>
+        <section id="about" class="about-container">
+            <div class=kitten ><img src="./images/kitten-1.png" alt="kitten"></div>
             <div class="about-text">
                 <h2>ABOUT</h2>
                 <p>Baby Kitten (BabyKitten) is a memecoin project built on the binance Smart Chain (BEP-20)
@@ -94,49 +93,46 @@
     
         <section id="roadmap" class="roadmap">
             <div class="text"> 
-                <p class="colour">// OUR WAY TO SPACE ?</p>
-                <h2>ROADMAP</h2>
+                <h4 class="colour">// OUR WAY TO SPACE ?</h4>
+                <h2>Our<span class="colour">Roadmap</span></h2>
+                <input type="range" min="1" max="100" value="15" class="slider">
             </div>
             <div class="gallery-container">
-                <div class="column">
-                    <figure>
-                        <img class="icon" src="./images/kitten-1.png" alt="kitten1"><span class="number">1</span> 
-                        <figcaption><Strong>Phase 1</Strong>
-                            <p>Our journey begins with an exciting project launch on the Binance Smart Chain. We introduce
-                                Baby Kitten($BabyKitten) to the world, laying the foundation for a memecoin revolution.</p>
-                        </figcaption>   
-                    </figure>
+                <div class="column roadmap-column">
+                    <div class='figure'>
+                        <img src="./images/kitten-1.png" alt="kitten1"><span class="number"><b>1</b></span></div> 
+                    <div class='figcaption'>
+                        <h3>Phase 1</h3>
+                        <p>Our journey begins with an exciting project launch on the Binance Smart Chain. We introduce
+                        Baby Kitten($BabyKitten) to the world, laying the foundation for a memecoin revolution.</p>
+                    </div>   
                 </div>
-                <div class="column">
-                    <figure>
-                        <img src="./images/kitten-2.png" alt="kitten2"><span class="number">2</span>
-                        <figcaption><Strong>Phase 2</Strong>
-                            <p>During this phase,we focus on fostering a strong and engaging community. We actively connect
-                                meme enhhusiasts, host events, and initiate giveaways to build a vibrant Baby Kitten commmunity.
-                            </p>
-                        </figcaption>   
-                    </figure>  
+                <div class="column roadmap-column">
+                    <div class="figure"><img src="./images/kitten-2.png" alt="kitten2"><span class="number"><b>2</b></span></div>
+                    <div class='figcaption'>
+                        <h3>Phase 2</h3>
+                        <p>During this phase,we focus on fostering a strong and engaging community. We actively connect
+                        meme enhhusiasts, host events, and initiate giveaways to build a vibrant Baby Kitten commmunity.</p>
+                    </div> 
                 </div>
-                <div class="column">
-                    <figure>
-                        <img src="./images/kitten-2.png" alt="kitten3"><span class="number">3</span>
-                        <figcaption><Strong>Phase 3</Strong>
-                            <p>We set our sights on global reach. Through strategic partnerships and increased accessibility, we
-                                expand the Baby Kitten ecosystem to a wider audience, making memecoin history on a global scale.
-                            </p>
-                        </figcaption>   
-                    </figure>
+                <div class="column roadmap-column">
+                    <div class='figure'><img src="./images/kitten-2.png" alt="kitten3"><span class="number"><b>3</b></span></div>
+                    <div class='figcaption'>
+                        <h3>Phase 3</h3>
+                        <p>We set our sights on global reach. Through strategic partnerships and increased accessibility, we
+                        expand the Baby Kitten ecosystem to a wider audience, making memecoin history on a global scale.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="contact">
             <div class="text"> 
-                <p class="colour">// OUR WAY TO SPACE ?</p>
                 <h2>Baby Kitten <span class="colour">To The Moon!</span></h2>
+                <input type="range" min="1" max="100" value="50" class="slider">
             </div>
             <div class="contact-container">
-                <div class="about-text contact-text">
+                <div class="contact-text">
                     <h2>Baby Kitten in to moon</h2>
                     <p>Join us to revolutionize the future - a place where cats will rule. We will reach new heights, 
                         establishing an unbreakable bond between humans and feline friends. Get ready to embark
@@ -147,20 +143,19 @@
                     
                     <div>
                         <button>Telegram</button>
-                        <button>DEXTools</button> 
+                        <button>Twitter</button> 
                     </div> 
                 </div>
-                <div class=kitten alt="kitten"></div>
-            </div>
-            <div class="call-to-action">
-                <div class="kitten mini-kitten" alt="kitten"></div>
-                <p>The era od dogs is over! The era of cats has arrived. With the cutest Meme Token, Baby Kitten will promote the revolution.</p>
-                <span><i class="fa-brands fa-telegram"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                </span>
+                <div class="kitten contact-kitten"><img src="./images/kitten-1.png" alt="kitten"><div>
             </div>
         </section>
 
+        <section class="call-to-action">
+            <div class="kitten mini-kitten"><img src="./images/kitten-1.png" alt="kitten"></div>
+            <p>The era od dogs is over! The era of cats has arrived. With the cutest Meme Token, Baby Kitten will promote the revolution..</p>
+            <span><i class="fa-brands fa-telegram"></i><i class="fa-brands fa-twitter"></i></span>
+        </section>
+    </main>    
         <footer>
             <p><small>Copyright&copy;Baby Kitten all rights reserved.</small></p>
             <ul>
@@ -171,8 +166,19 @@
                 <a href="#">Live chart</a>
                 <a href="#">Contract</a>
             </ul>
-        </footer>
-    </main>
-    
+        </footer> 
+        
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        <script>
+                    function myFunction() {
+          var x = document.getElementById("mytopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+        
 </body>
 </html>
