@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
+:root{
+    --primary-color:skyblue;
+    --secondary-color:purple;
+    --color-gradient:linear-gradient(var(--primary-color), var(--secondary-color));
+    --color-white:#ffff;
+    --color-black: #000;
+
+    /* container widths */
+    --container-width-pc: 80%;
+    --container-width-small:92%
+}
+
+  /* Slideshow container */
+*, *::after{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+main{
+    /* background: var(--color-gradient); */
+    height: 100vh;
+}
+
+nav{
+    background: var(--color-white);
+    width: 100vw;
+    padding: 1rem 0 1rem 0;
+    /* height: 4rem; */
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* z-index: 2; */
+    box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+nav .topnav-container{
+    width: var(--container-width-pc);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-togglebtn{
+    font-size: 2rem;
+    color: var(--color-black);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+.brand{
+    font-family: "Sixtyfour Convergence", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.fa-solid{
+    color: black;
+    font-size: 1.5rem;
+    width: 2em;
+    height: 2rem;
+}
+
+.topnav{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.topnav li a, .hotline a{
+    color: var(--color-black);
+    font-weight: 600;
+    transition: color 0.4s ease;
+    position: relative;
+}
+
+.topnav li a:hover{
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.topnav a.active::after {
+    content: '';
+    display: block;
+    background:var(--primary-color);
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Dark mode icon */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip .tooltiptext {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    visibility: hidden;
+    width: 10rem;
+    background:var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+}
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* hotline link */
+.hotline-container{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hotline{
+    max-width: 9rem;
+    /* border: 1px solid red; */
+}
+
+.hotline .number{
+    color: #e76862;
+    font-size: 1.5rem;
+}
+
+/* hero section */
+.mySlides {
+    width: 100%;
+    height: 600px;
+    display: none;
+}
+
+.mySlides img{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mySlides .text {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    width: 100%; /* Full width */
+    padding: 2rem 0;
+    transform: translate(-50%, -50%);
+    color: var(--color-white);
+}
+  
+  /* Number text (1/3 etc) */
+.numbertext {
+    color: var(--color-white);
+    font-size: 1rem;
+    padding: 8px 12px;
+    position: absolute;
+    top: 10%;
+}
+
+.mySlides h1{
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.mySlides h1 span {
+    font-size: 4rem;
+    margin-right: 1rem;
+}
+
+.mySlides button {
+    border: none;
+    outline: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    margin: 4rem 0;
+    background:var(--color-white);
+    text-align: center;
+    cursor: pointer;
+}
+
+.dot-container{
+    text-align: center;
+    margin-bottom: 2rem;
+    position: absolute;
+    bottom: 25%;
+    left: 45%;
+}
+  
+  /* The dots/bullets/indicators */
+.dot{
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    margin: 0 1rem;
+    background-color: var(--color-white);
+    transition-property: var(--color-white) 0.6s ease-in;
+}
+  
+.dot .active {
+    background: var(--color-black);
+}
+  
+  /* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: fade 1.5s infinite;
+}
+  
+  @keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+}
+
+/* contact button */
+.contactbtn{
+    background: var(--color-gradient);
+    color: var(--color-black);
+    padding: .5rem 3rem .5rem .5rem;
+    box-shadow: .4rem 0 1rem ;
+    border: none;
+    border-radius: 0 1rem 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 20rem;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.contactbtn:hover{
+    scale: 1.05;
+}
+ 
+.contactbtn:active{
+     scale: 0.95;
+}
+
+.contact-form{
+    display: none;
+    /* background-color: gray; */
+}
+
+.form-container{
+    max-width: 300px;
+    padding: 1rem;
+    background: var(--color-white);
+}
+
+.form-container .cancelbtn{
+    background-color: red;
+    float: right;
+    width: 1rem;
+    height: 1rem;
+    color: var(--color-white);
+    /* margin-bottom: .8rem; */
+
+}
+
+.form-container input{
+    width: 100%;
+    padding: 1rem;
+    margin: .25rem 0 1.5rem 0;
+    border: none;
+    background: #f1f1f1;
+}
+label{
+    color: var(--color-black);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+label span{
+    color: red;
+}
+
+.submitbtn{
+    background: #04AA6D;
+    color: var(--color-white);
+    padding: 1rem 1.5rem;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin-bottom: .8rem;
+    font-size: 1.2rem;
+    opacity: 0.6
+}
+
+.submitbtn:hover{
+    opacity: 1
+}
+
+/* my hobbies */
+
+.hobbies {
+    text-align: center;
+    padding: 32px;
+  }
+
+  .hobby-gallery{
+    padding: .8em;
+    max-width: 60vw;
+    /* margin: 0, auto; */
+    background: var(--color-white);
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+  }
+
+  .hobby-gallery div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .big-stretch{
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  .v-stretch{
+    grid-row: span 2;
+  }
+
+  .h-stretch{
+    grid-column: span 2;
+  }
+
+  @media (max-width: 400px){
+    .v-stretch{
+        grid-row: span 1;
+    }
+
+    .h-stretch{
+        grid-column: span 1;
+    }
+
+    .big-stretch{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+  /* about section */
+.about-container{
+    border: 1px solid black;
+    width: 60%;
+    height: 30rem;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    background-color: #000;
+}
+
+.image-container{
+    flex: 35%;
+    max-width: 100%;
+    height: 100%;
+    border-radius:12rem 12rem 0 0;
+    border: 10px solid var(--primary-color);
+    background:var(--color-white) url(./images/Techpage.png) no-repeat bottom;    
+}
+
+.about-text{
+    flex: 50%;
+    font-size: 2rem;
+    color: var(--color-white);
+    padding: 2rem;
+}
+  
+ 
+
+  @media screen and (max-width: 1024px) {
+    .topnav-container{ 
+        width: var(--container-width-small);
+        position: relative;
+    }
+    .topnav{
+        position: absolute;
+        top: 110%;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+    }
+
+    .topnav li{
+        width: 100%;
+        box-shadow: -2rem 4rem 4rem rgba(0, 0, 0, 0.2);
+        padding: 0 8em 2em 2.5em;
+    }
+
+    .topnav li a{
+        height: 5em;
+        width: 100%;
+        display: flex;
+        align-items: center; 
+        padding: 0 5em 0 2.5em;
+        background-color:var(--color-white);
+        border-top: 1px solid var(--primary-color);
+    }
+
+}
+
+.topnav a.active::after {
+    display: none;
+}
+
+.nav-togglebtn{
+  display: inline-block;
+  font-size: 2rem;
+  color: var(--color-black);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+#nav-toggle-close{
+  display: none;
+}
+
+.hotline{
+    display: none;
+} 
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+}
+ 
