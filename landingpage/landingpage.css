@@ -2,14 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color:#000;
+    background:  #000 url("./images/memecoin.png") no-repeat left top;
 }
 
 main{
-    background-color:#000;
-    color: #f3f7ff;
-    padding: 0 15%;
-    background:  #000 url("./images/memecoin.png") no-repeat left top;
+    color: #cfc6c6;
+    max-width: 60%;
+    margin: auto;
 }
 
 .logo{
@@ -18,38 +21,70 @@ main{
 }
 
 header nav{
+    /* max-width: 100%; */
     display: flex;
     justify-content: space-between;
+    /* position: fixed;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    z-index: 2; */
+    /* background-color: #cfc6c6; */
     align-items:center;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
-header nav a{
+nav .topnav{
+    display: flex;
+    align-items: center;
+    /* flex-direction: row; */
+    gap: 1em;
+}
+
+nav .topnav li{
+    list-style-type: none;
+}
+
+nav .topnav a{
   text-decoration: none;
   color: #f3f7ff;
   padding: 0.5em 0.5em;
+  font-weight: 500;
+  transition: color 0.4s ease;
 }
 
-header nav a:nth-child(7){
-    background-color: #ebab04;
-    border-radius: 2em;
-    padding: 1em 1em;
-    font-size: 0.8em;
-}
-
-header nav a:hover{
+nav .topnav a:hover{
     text-decoration: underline;
     color: #ebab04;
 }
 
-header nav a:nth-child(7):hover{
+.topnav .action-btn{
+    background-color: #ebab04;
+    border-radius: 2em;
+    padding: 1em 1em;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.topnav .action-btn:hover{
    color: #f3f7ff;
+   scale: 1.05;
+}
+
+.topnav .action-btn:active{
+    scale: 0.95;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
+.nav-togglebtn{
+    font-size: 2rem;
+    color: #cfc6c6;
+    border: none;
+    background: transparent;
+    cursor: pointer;
     display: none;
-}
+  }
 
 .hero-container, .about-container, .contact-container{
     display: flex;
@@ -58,15 +93,21 @@ header nav a:nth-child(7):hover{
 }
 
 .welcome{
-    max-width:40%;
+    max-width:50%;
     height:auto;
-    padding-right: 2em;
+    font-size: 1.4em;
+    margin-right: 20%;
     flex:50%;
 }
 
 .welcome h1{
-    font-size: 2em;
-    max-width: 60%;
+    min-width: 6.5em;
+    max-width: 6.5em;
+    font-size: 2.3em;
+}
+
+.welcome .colour{
+    font-size: 0.8em;
 }
 
 .colour, .about-text h2{
@@ -75,10 +116,12 @@ header nav a:nth-child(7):hover{
 }
 
 .welcome p, .contact-text p{
-    padding: 2em 0 0.5em 0;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 1em 0 0.5em 0;
 }
 
-small{
+.small{
     padding: 2em 0;
     font-size: 0.6em;
 }
@@ -94,23 +137,29 @@ small{
 }
 
 .hero-container button:last-child{
-    padding: 0.8em 3em;
+    padding: 1em 3em;
 }
 
 .kitten{
-    max-width: 30%;
+    max-width: 400px;
+    max-height: 400px;
     margin: auto;
     flex:50%;
 }
 
  .kitten img{
-    max-width: 100%;
-    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
 }
 
+/* Tokenemic section starts here */
 .text{
     text-align: center;
     padding-top: 2.5em;
+}
+
+.text h4{
+    font-family: "Monda", sans-serif;
 }
 
 .text h1{
@@ -136,6 +185,14 @@ small{
     cursor: pointer;
 }
 
+.border-design{
+    background-color: #db9141;
+    border-radius: 5px 0 30px 0;
+    height: 50px;
+    width: 10%;
+    float: inline-start;
+}
+
 .gallery-container{
     display: flex;
     flex-wrap: wrap;
@@ -155,15 +212,16 @@ small{
 }
 
 .column .figure{
-    max-width: 100%;
+    max-width: 80%;
     max-height: 60%;
-    margin: auto;
     padding-top: 1.5em;
+    margin: auto;
 }
 
 .column img{
     max-width: 80%; height: 100%; /* so it wont stretch more than it max.width */
     vertical-align: bottom; /*To align image to text*/
+    /* border: 1px solid red; */
 }
 
 .figcaption h3{
@@ -194,7 +252,7 @@ padding: 1.5em 0;
 }
 
 .about-text p{
-    font-size: 1em;
+    font-size: 1.2em;
     padding: 1em 0;
 }
 
@@ -217,8 +275,25 @@ padding: 1.5em 0;
     padding:0.4em 0.7em;
 }
 
+.roadmap .figcaption{
+    font-size: 1.1em;
+}
+
+.roadmap .colour{
+    margin-left: 0.5em;
+}
+
+.contact-text h1{
+    /* min-width: 10em; */
+    max-width: 12em;
+    font-size: 2.3em;
+}
+
 .contact-text{
     max-width: 60%;
+    font-size: 1.2em;
+    align-content: center;
+    margin-right: 5%;
 }
 
 .contact-text button{
@@ -278,32 +353,44 @@ footer ul a:hover{
   /*Tablet & Mobile styles for topnav*/
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 800px) {
-    .topnav a{display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
-      color: #f3f7ff;
+@media screen and (max-width: 1280px) {
+        .topnav-container{ 
+        position: relative;
     }
-  }
-  
-  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 800px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
+    .topnav{
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
     }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
+
+    .topnav li{
+        width: 100%;
     }
-  }
+
+    .topnav li a{
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em 8em 1em 8em;
+        border-top: 1px solid #cb8032;
+    }
+
+    .nav-togglebtn{
+        display: inline-block;
+        }
+        
+        #nav-toggle-close{
+        display: none;
+      }
+
+}
 
   /*Mobile styles for responsive layout*/
-  @media(max-width: 600px) {
+@media screen and (max-width: 600px) {
     .column{
         flex: 100%;
         max-width: 100%;
