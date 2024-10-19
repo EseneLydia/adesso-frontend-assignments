@@ -422,32 +422,21 @@ label span{
         background-color:var(--color-white);
         border-top: 1px solid var(--primary-color);
     }
-
-}
-
-.topnav a.active::after {
+    .nav-togglebtn{
+        display: inline-block;
+        font-size: 2rem;
+        color: var(--color-black);
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+    
+    #nav-toggle-close{
+        display: none;
+    }
+    
+    .hotline{
     display: none;
-}
-
-.nav-togglebtn{
-  display: inline-block;
-  font-size: 2rem;
-  color: var(--color-black);
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-#nav-toggle-close{
-  display: none;
-}
-
-.hotline{
-    display: none;
-} 
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-    .text {font-size: 11px}
+  }
 }
  
