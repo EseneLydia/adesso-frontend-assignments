@@ -218,7 +218,7 @@ nav .topnav-container{
 }
   
 .dot .active {
-    background: var(--color-black);
+    background: #000;
 }
   
   /* Fading animation */
@@ -311,22 +311,26 @@ label span{
 
 /* my hobbies */
 
-.hobbies {
+section #hobby{
+    width: 80%;
+    margin: 1rem, auto;
+}
+
+.hobbies h2{
     text-align: center;
     padding: 32px;
-  }
+}
 
   .hobby-gallery{
     padding: .8em;
     max-width: 60vw;
-    /* margin: 0, auto; */
     background: var(--color-white);
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     grid-auto-rows: 250px;
     grid-auto-flow: dense;
-  }
+}
 
   .hobby-gallery div img{
     width: 100%;

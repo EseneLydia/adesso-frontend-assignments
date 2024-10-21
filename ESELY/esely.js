@@ -40,15 +40,33 @@ function showSlides() {
 }
 
 // script for form
-let OpenForm = document.getElementsByClassName('contactbtn');
-let CloseForm = document.getElementsByClassName('qcancelbtn');
+let OpenForm = document.getElementById('contactbtn');
+let CloseForm = document.getElementById('cancelbtn');
 
 function openForm() {
-  document.getElementById("myForm").style.display = "block";
+  document.getElementById("popup-form").style.display = "block";
 }
 OpenForm.addEventListener('click', openForm)
 
 function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+  document.getElementById("popup-form").style.display = "none";
 }
 CloseForm.addEventListener('click', closeForm)
+
+// form validation
+function validateform(){
+  let x = document.forms["myform"]["name"]["email"]["hobby"].value;
+  if (x == ""){
+    alert("Please enter your details");
+    // return false;
+  }
+  else{
+    alert("Thanks for submitting your details");
+    return false;
+  }
+}
+
+let myform = document.querySelector(".form-container");
+myform.addEventListener('onsubmit', validateform)
+
+
